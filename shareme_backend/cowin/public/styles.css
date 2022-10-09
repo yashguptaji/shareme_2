@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Skranji&display=swap");
+body {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+  font-family: "Noto Serif", serif;
+  max-width: 1200px;
+  background: rgb(216, 169, 106);
+}
+p,
+h1,
+h2,
+h3,
+a,
+ul {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  color: #222;
+}
+/* h3 {
+  color: burlywood;
+} */
+.centres {
+  margin: 0.5rem;
+}
+.centre {
+  background: black;
+  border-radius: 7px;
+  margin: 0.5rem;
+  /* color: burlywood; */
+  /* padding: 0.5rem; */
+}
+.centre h3,
+.centre p {
+  padding: 0.5rem 1rem;
+  color: burlywood;
+}
+.sessions {
+  background: blanchedalmond;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 0.5rem;
+  padding: 0.5rem;
+}
+.sessions:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+  background: rgb(255, 238, 211);
+}
+.session {
+  background: burlywood;
+  border: 2px solid #e7e7e7;
+  border-radius: 7px;
+  padding: 0.8rem 0.8rem;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.session:hover {
+  border: 2px solid burlywood;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+  background: rgb(231, 192, 142);
+  cursor: pointer;
+}
+a {
+  background: black;
+  color: burlywood;
+  padding: 0.5rem;
+  border-color: black;
+  border-width: 2px 2px;
+  border-radius: 5px;
+}
+a:hover {
+  color: blanchedalmond;
+}
+
+.content {
+  padding: 10%;
+}
+
+.content .title {
+  color: black;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: xx-large;
+  text-align: center;
+  font-family: "Skranji", cursive;
+}
+
+.form {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.form select {
+  padding: 0.8rem;
+  width: 20rem;
+  margin: 0.5rem;
+  border-radius: 7px;
+  text-align: center;
+  background: blanchedalmond;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.age {
+  display: flex;
+  /* width: 25%; */
+  align-content: center;
+  justify-content: center;
+}
+
+.age span {
+  margin-right: 1.5rem;
+}
+
+button {
+  padding: 0.8rem;
+  margin: 0.5rem;
+  border-radius: 7px;
+  background: burlywood;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.submit {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.submit button {
+  margin: 2rem;
+  background: black;
+  color: burlywood;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: medium;
+  border-color: black;
+  border-width: 2px 2px;
+  border-radius: 7px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.submit button:hover {
+  color: blanchedalmond;
+  cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+}

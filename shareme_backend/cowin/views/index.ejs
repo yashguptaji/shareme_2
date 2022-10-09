@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Details of centres with available vaccine</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+
+  <body>
+    <ul class="centres"><% if(age==0){%>
+      <% if(centres.length>0){
+        var totalCentres=0;
+      centres.forEach(centre=>{ 
+        var ctr=0;
+        sessions=centre.sessions;
+        sessions.forEach(session=>{
+          if(session.available_capacity>1){
+          ctr+=1;
+          totalCentres+=1;}
+        });
+        if(ctr>0){%>
+      <li class="centre">
+        <h3>Centre name: <%=centre.name%></h3>
+        <p>Address: <%=centre.address%></p>
+        <ul class="sessions">
+        <% sessions.forEach(session=>{
+          if(session.available_capacity>1){ %>
+            
+            <li class="session">Date: <%=session.date%>
+            <br>Vaccine: <%=session.vaccine%>
+            <br>Dose 1: <%=session.available_capacity_dose1%>
+            <br>Dose 2: <%=session.available_capacity_dose2%>
+            <br>Min age: <%=session.min_age_limit%></Date:></li>
+            
+         <% }
+        });%>
+        </ul>
+      </li>
+      <%}%>
+      <% }); 
+    if (totalCentres==0){ %>
+      <p>No centres found.</p>
+    <%}} else {%>
+      <p>No centres found.</p>
+      <%}%>
+      <%}
+
+
+      else{ %>
+        <% if(centres.length>0){
+        var totalCentres=0;
+      centres.forEach(centre=>{ 
+        var ctr=0;
+        sessions=centre.sessions;
+        sessions.forEach(session=>{
+          if(session.available_capacity>1&&session.min_age_limit==age){
+          ctr+=1;
+          totalCentres+=1;}
+        });
+        if(ctr>0){%>
+          <li class="centre">
+        <h3>Centre name: <%=centre.name%></h3>
+        <p>Address: <%=centre.address%></p>
+        <ul class="sessions">
+        <% sessions.forEach(session=>{
+          if(session.available_capacity>1&&session.min_age_limit==age){ %>
+            
+            <li class="session">Date: <%=session.date%>
+            <br>Vaccine: <%=session.vaccine%>
+            <br>Dose 1: <%=session.available_capacity_dose1%>
+            <br>Dose 2: <%=session.available_capacity_dose2%>
+            <br>Min age: <%=session.min_age_limit%></li>
+         <% }
+        });%>
+        </ul>
+      </li>
+      <%}%>
+      <% }); 
+    if (totalCentres==0){ %>
+      <p>No centres found.</p>
+    <%}} else {%>
+      <p>No centres found.</p>
+      <%}%>
+      <%}%>
+
+    </ul>
+    <br>
+    <p><a href="/form">Go back</a></p>
+    <script>
+      
+    </script>
+  </body>
+</html>
